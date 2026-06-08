@@ -38,7 +38,17 @@ public class Main {
         } while (valore != 0);
     }
     static void esercizio2(Scanner scanner) {
-        Auto auto = new Auto(100, 10);
+        System.out.print("Inserisci km percorsi: ");
+        double km = scanner.nextDouble();
+        System.out.print("Inserisci litri consumati: ");
+        double litri = scanner.nextDouble();
+
+        Auto auto = new Auto(km, litri);
+        try {
+            System.out.println("Consumi: " + auto.kmPerLitro() + " km/litro");
+        } catch (ArithmeticException e) {
+            System.out.println("Errore: " + e.getMessage());
+        }
     }
     static void esercizio3(Scanner scanner) {};
 }

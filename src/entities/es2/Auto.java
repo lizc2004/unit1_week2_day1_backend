@@ -9,6 +9,11 @@ public class Auto {
         this.litri = litri;
     }
 
-    // TODO: metodo per calcolare km/litro (gestire divisione per zero)
+    public double kmPerLitro() {
+        if (litri == 0) {
+            throw new ArithmeticException("Divisione per zero: litri non può essere 0");
+        }
+        return km / litri;
+    }
 
 }
