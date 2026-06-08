@@ -7,9 +7,22 @@ public class Array {
         this.array = new int[size];
     }
 
-    // TODO: metodo per riempire l'array con valori casuali tra 1 e 10
+    public void fillRandom() {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int)(Math.random() * 10) + 1;
+        }
+    }
 
-    // TODO: metodo per inserire un valore in una posizione specificata
-
-    // TODO: metodo per stampare l'array
+    public void print() {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+    public void set(int posizione, int valore) {
+        array[posizione] = valore;  // Java lancia ArrayIndexOutOfBoundsException se fuori range
+    }
 }
+
+
+
